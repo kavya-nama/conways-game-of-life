@@ -232,7 +232,7 @@ void print_game_info(int rows, int cols, int refresh_rate_ms, int turns,
 int main(int argc, char *argv[]) {
     if (argc != 1 && argc != 5) {
         std::cout << "Usage: " << argv[0]
-                  << " [rows cols turns refresh_rate_ms]\n";
+                  << " [rows cols refresh_rate_ms turns]\n";
         return 1;
     }
 
@@ -240,8 +240,8 @@ int main(int argc, char *argv[]) {
     if (argc == 5) {
         rows = std::stoi(argv[1]);
         cols = std::stoi(argv[2]);
-        turns = std::stoi(argv[3]);
-        refresh_rate_ms = std::stoi(argv[4]);
+        refresh_rate_ms = std::stoi(argv[3]);
+        turns = std::stoi(argv[4]);
     }
 
     Game game(rows, cols);
