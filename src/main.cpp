@@ -222,6 +222,13 @@ void reset_cursor_up(int lines) {
     std::cout << "\033[" << lines << "A\r";
 }
 
+void print_game_info(int rows, int cols, int refresh_rate_ms, int turns,
+                     int turns_elapsed) {
+    std::cout << "Grid: " << rows << "x" << cols
+              << "\tRefresh Rate : " << refresh_rate_ms
+              << "ms\tTurn: " << turns_elapsed << "/" << turns << "\n";
+}
+
 int main(int argc, char *argv[]) {
     if (argc != 1 && argc != 5) {
         std::cout << "Usage: " << argv[0]
@@ -239,11 +246,16 @@ int main(int argc, char *argv[]) {
 
     Game game(rows, cols);
     int turns_remaining = turns;
+    print_game_info(rows, cols, refresh_rate_ms, turns,
+                    turns - turns_remaining);
     game.print();
     while (turns_remaining--) {
         sleep(refresh_rate_ms);
         game.step();
-        reset_cursor_up(rows);
+        reset_cursor_up(rows + 1);
+        print_game_info(rows, cols, refresh_rate_ms, turns,
+                        turns - turns_remaining);
+
         game.print();
     };
     return 0;
