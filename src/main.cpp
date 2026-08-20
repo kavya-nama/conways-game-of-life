@@ -7,7 +7,7 @@
 
 // : char tells the enum what storage primitive to use, char = 1 byte
 enum class CellState : char { Alive = 1, Dead = 0 };
-enum class CellStateSymbol : char { Alive = '*', Dead = ' ' };
+enum class CellStateSymbol : char { Alive = '+', Dead = ' ' };
 
 // overloading << on cout since CellStateSymbol is a scoped enum which has no
 // implicit convsion to char
