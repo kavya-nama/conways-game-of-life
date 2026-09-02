@@ -1,5 +1,7 @@
 # Conway's Game of Life
 
+[![Build](https://github.com/kavya-nama/conways-game-of-line/actions/workflows/build.yml/badge.svg)](https://github.com/kavya-nama/conways-game-of-line/actions/workflows/build.yml)
+
 Terminal-based Conway's Game of Life in C++.
 Uses `+` for alive cells and ` ` for dead cells.
 Displays a live header with grid size, refresh rate, and turn counter.
