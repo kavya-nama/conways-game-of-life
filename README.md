@@ -1,6 +1,6 @@
 # Conway's Game of Life
 
-[![Build](https://github.com/kavya-nama/conways-game-of-line/actions/workflows/build.yml/badge.svg)](https://github.com/kavya-nama/conways-game-of-line/actions/workflows/build.yml)
+[![Build](https://github.com/kavya-nama/conways-game-of-life/actions/workflows/build.yml/badge.svg)](https://github.com/kavya-nama/conways-game-of-life/actions/workflows/build.yml)
 
 Terminal-based Conway's Game of Life in C++.
 Uses `+` for alive cells and ` ` for dead cells.
